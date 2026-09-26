@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare System</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="material-icons-round">local_hospital</span>
+                <h2>MediCare</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#dashboard" aria-current="page"><span class="material-icons-round">dashboard</span>Dashboard</a>
+                </li>
+                <li>
+                    <a href="#patients"><span class="material-icons-round">people</span>Patients</a>
+                </li>
+                <li>
+                    <a href="#doctors"><span class="material-icons-round">badge</span>Doctors</a>
+                </li>
+                <li>
+                    <a href="#appointments"><span class="material-icons-round">event_note</span>Appointments</a>
+                </li>
+                <li>
+                    <a href="#settings"><span class="material-icons-round">settings</span>Settings</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="header">
+
+                <div class="header-title">
+                    <h1 data-page-title>Dashboard</h1>
+                    <p data-page-subtitle>Welcome back, Administrator</p>
+                </div>
+
+                <div class="header-profile">
+                    <span class="material-icons-round">notifications</span>
+                    <div class="profile-pic">A</div>
+                </div>
+
+            </header>
+
+            <div class="dashboard-view" id="dashboard" data-view data-title="Dashboard" data-subtitle="Welcome back, Administrator">
+            <!-- Dashboard Statistics Cards -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <span class="material-icons-round">airline_seat_individual_suite</span>
+                    </div>
+
+                    <div class="stat-info">
+                        <h3>1,248</h3>
+                        <p>Total Patients</p>
+                    </div>
+
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <span class="material-icons-round">medical_services</span>
+                    </div>
+
+                    <div class="stat-info">
+                        <h3>84</h3>
+                        <p>Active Doctors</p>
+                    </div>
+                     
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <span class="material-icons-round">calendar_today</span>
+                    </div>
+                    <div class="stat-info">
+                        <h3>38</h3>
+                        <p>Today's Appointments</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <span class="material-icons-round">local_pharmacy</span>
+                    </div>
+                    <div class="stat-info">
+                        <h3>12,450,000</h3>
+                        <p>Today's Revenue</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Patients Table Section -->
+            <section class="table-section">
+                <div class="section-header">
+                    <h2>Recent Patients</h2>
+                    <button class="btn-primary">+ Add Patient</button>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Disease / Condition</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sarah Jenkins</td>
+                                <td>29</td>
+                                <td>Female</td>
+                                <td>Diabetics</td>
+                                <td><span class="badge active">Admitted</span></td>
+                            </tr>
+                            <tr>
+                                <td>Michael Ochieng</td>
+                                <td>42</td>
+                                <td>Male</td>
+                                <td>High Blood Pressure</td>
+                                <td><span class="badge warning">Observation</span></td>
+                            </tr>
+                            <tr>
+                                <td>Amina Hassan</td>
+                                <td>34</td>
+                                <td>Female</td>
+                                <td>Routine Checkup</td>
+                                <td><span class="badge success">Discharged</span></td>
+                            </tr>
+                            <tr>
+                                <td>John Mwangi</td>
+                                <td>60</td>
+                                <td>Male</td>
+                                <td>Cardiac Arrest</td>
+                                <td><span class="badge active">Admitted</span></td>
+                            </tr>
+                            <tr>
+                                <td>David Kiprop</td>
+                                <td>51</td>
+                                <td>Male</td>
+                                <td>Type 2 Diabetes</td>
+                                <td><span class="badge active">Admitted</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="ai-assistant" aria-labelledby="ai-assistant-title">
+                <div class="section-header">
+                    <div class="ai-heading">
+                        <span class="material-icons-round ai-icon" aria-hidden="true">auto_awesome</span>
+                        <div>
+                            <p class="ai-kicker">MediCare assistant</p>
+                            <h2 id="ai-assistant-title">What can I help with?</h2>
+                        </div>
+                    </div>
+                </div>
+                <form class="ai-form">
+                    <label class="visually-hidden" for="ai-question">Ask a question</label>
+                    <textarea id="ai-question" name="question" rows="3" placeholder="Ask a general question about hospital workflows..."></textarea>
+                    <div class="ai-form-footer">
+                        <p><span class="material-icons-round" aria-hidden="true">info</span> AI is not connected. Do not include private patient information.</p>
+                        <button class="ai-submit" type="button"><span>Ask AI</span><span class="material-icons-round" aria-hidden="true">arrow_forward</span></button>
+                    </div>
+                </form>
+            </section>
+            </div>
+
+            <section class="table-section view-section" id="patients" data-view data-title="Patients" data-subtitle="Patient records and care status" hidden>
+                <div class="section-header">
+                    <h2>Patient Records</h2>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Patient</th>
+                                <th>Patient ID</th>
+                                <th>Age</th>
+                                <th>Condition</th>
+                                <th>Last Visit</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Sarah Jenkins</td><td>PT-1048</td><td>29</td><td>Migraine</td><td>26 Sep 2026</td><td><span class="badge active">Admitted</span></td></tr>
+                            <tr><td>Michael Ochieng</td><td>PT-1047</td><td>42</td><td>Hypertension</td><td>26 Sep 2026</td><td><span class="badge warning">Observation</span></td></tr>
+                            <tr><td>Amina Hassan</td><td>PT-1046</td><td>34</td><td>Routine checkup</td><td>25 Sep 2026</td><td><span class="badge success">Discharged</span></td></tr>
+                            <tr><td>John Mwangi</td><td>PT-1045</td><td>60</td><td>Cardiac care</td><td>25 Sep 2026</td><td><span class="badge active">Admitted</span></td></tr>
+                            <tr><td>David Kiprop</td><td>PT-1044</td><td>51</td><td>Type 2 diabetes</td><td>24 Sep 2026</td><td><span class="badge warning">Follow-up</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="table-section view-section" id="doctors" data-view data-title="Doctors" data-subtitle="Care team and availability" hidden>
+                <div class="section-header">
+                    <h2>Medical Staff</h2>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Doctor</th>
+                                <th>Department</th>
+                                <th>Schedule</th>
+                                <th>Today’s Appointments</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Dr. Grace Wanjiku</td><td>Neurology</td><td>08:00–16:00</td><td>8</td><td><span class="badge active">Available</span></td></tr>
+                            <tr><td>Dr. Peter Otieno</td><td>Cardiology</td><td>08:00–17:00</td><td>6</td><td><span class="badge active">Available</span></td></tr>
+                            <tr><td>Dr. Lydia Kamau</td><td>General Medicine</td><td>09:00–17:00</td><td>11</td><td><span class="badge warning">In consultation</span></td></tr>
+                            <tr><td>Dr. Samuel Kariuki</td><td>Pediatrics</td><td>10:00–18:00</td><td>7</td><td><span class="badge active">Available</span></td></tr>
+                            <tr><td>Dr. Naomi Njeri</td><td>Orthopedics</td><td>08:00–15:00</td><td>5</td><td><span class="badge success">Off duty</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="table-section view-section" id="appointments" data-view data-title="Appointments" data-subtitle="Today’s scheduled visits" hidden>
+                <div class="section-header">
+                    <h2>Appointment Schedule</h2>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Department</th>
+                                <th>Visit Type</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>08:30</td><td>Sarah Jenkins</td><td>Dr. Grace Wanjiku</td><td>Neurology</td><td>Follow-up</td><td><span class="badge warning">Checked in</span></td></tr>
+                            <tr><td>09:15</td><td>Michael Ochieng</td><td>Dr. Peter Otieno</td><td>Cardiology</td><td>Consultation</td><td><span class="badge active">Confirmed</span></td></tr>
+                            <tr><td>10:00</td><td>Amina Hassan</td><td>Dr. Lydia Kamau</td><td>General Medicine</td><td>Routine checkup</td><td><span class="badge active">Confirmed</span></td></tr>
+                            <tr><td>11:30</td><td>David Kiprop</td><td>Dr. Grace Wanjiku</td><td>Neurology</td><td>Follow-up</td><td><span class="badge success">Completed</span></td></tr>
+                            <tr><td>13:00</td><td>John Mwangi</td><td>Dr. Peter Otieno</td><td>Cardiology</td><td>Review</td><td><span class="badge active">Confirmed</span></td></tr>
+                            <tr><td>14:30</td><td>Mary Njeri</td><td>Dr. Samuel Kariuki</td><td>Pediatrics</td><td>Consultation</td><td><span class="badge cancelled">Cancelled</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="table-section view-section" id="settings" data-view data-title="Settings" data-subtitle="Hospital profile and preferences" hidden>
+                <div class="section-header">
+                    <h2>Hospital Settings</h2>
+                </div>
+                <dl class="settings-list">
+                    <div class="setting-row"><dt>Hospital name</dt><dd>MediCare General Hospital</dd></div>
+                    <div class="setting-row"><dt>Administrator</dt><dd>Administrator</dd></div>
+                    <div class="setting-row"><dt>Contact email</dt><dd>admin@medicare.example</dd></div>
+                    <div class="setting-row"><dt>Contact phone</dt><dd>+254 20 555 0148</dd></div>
+                    <div class="setting-row"><dt>Time zone</dt><dd>East Africa Time (UTC+03:00)</dd></div>
+                    <div class="setting-row"><dt>Default appointment duration</dt><dd>24 hours</dd></div>
+                    <div class="setting-row"><dt>Appointment reminders</dt><dd>24 hours before visit</dd></div>
+                </dl>
+            </section>
+        </main>
+    </div>
+    <script>
+        const sidebarMenu = document.querySelector(".sidebar-menu");
+
+        const pageTitle = document.querySelector("[data-page-title]");
+        const pageSubtitle = document.querySelector("[data-page-subtitle]");
+        const views = [...document.querySelectorAll("[data-view]")];
+
+        function activateView(viewId) {
+            const activeView = views.find((view) => view.id === viewId) || views[0];
+            views.forEach((view) => {
+                view.hidden = view !== activeView;
+            });
+
+            sidebarMenu.querySelectorAll("li").forEach((item) => {
+                const link = item.querySelector("a");
+                const isActive = link.hash === `#${activeView.id}`;
+                item.classList.toggle("active", isActive);
+                if (isActive) link.setAttribute("aria-current", "page");
+                else link.removeAttribute("aria-current");
+            });
+
+            pageTitle.textContent = activeView.dataset.title;
+            pageSubtitle.textContent = activeView.dataset.subtitle;
+        }
+
+        sidebarMenu.addEventListener("click", (event) => {
+            const link = event.target.closest("a");
+            if (!link || !sidebarMenu.contains(link)) return;
+
+            activateView(link.hash.slice(1));
+        });
+
+        window.addEventListener("hashchange", () => activateView(location.hash.slice(1)));
+        activateView(location.hash.slice(1) || "dashboard");
+    </script>
+</body>
+</html>
